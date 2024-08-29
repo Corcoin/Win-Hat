@@ -244,21 +244,14 @@
         <p>&copy; 2024 Winhat Terminal. All rights reserved.</p>
     </footer>
     <script>
-        document.getElementById('run-script').addEventListener('click', function() {
-            fetch('/run-win-hat', { method: 'POST' })
+        function runWinhat() {
+            fetch('http://localhost:5000/run-winhat')
                 .then(response => response.json())
                 .then(data => {
-                    const outputElement = document.getElementById('output');
-                    if (data.status === 'success') {
-                        outputElement.textContent = data.output;
-                    } else {
-                        outputElement.textContent = `Error: ${data.output}`;
-                    }
+                    document.getElementById('output').innerText = data.output || data.error;
                 })
-                .catch(error => {
-                    document.getElementById('output').textContent = `Request failed: ${error}`;
-                });
-        });
+                .catch(error => console.error('Error:', error));
+        }
     </script>
 </body>
 </html>
