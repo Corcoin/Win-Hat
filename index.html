@@ -245,13 +245,21 @@
     </footer>
     <script>
         function runWinhat() {
-            fetch('/run-winhat')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('output').innerText = data.output || data.error;
-                })
-                .catch(error => console.error('Error:', error));
-        }
+        fetch('/run-winhat')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById('output').innerText = data.output || data.error || "Script executed but produced no output.";
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('output').innerText = 'An error occurred: ' + error.message;
+            });
+    }
     </script>
 </body>
 </html>
