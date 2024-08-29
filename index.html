@@ -177,8 +177,8 @@
         
     </nav>
     <div id="container">
-        <button id="run-script">Run Win Hat</button>
-        <pre id="output"></pre>
+       <button onclick="runWinhat()">Run winhat.py</button>
+    <div id="output"></div>
         <h1>Introduction Video</h1>
         <video controls>
             <source src="Untitled video - Made with Clipchamp (10).mp4" type="video/mp4">
@@ -245,7 +245,7 @@
     </footer>
     <script>
         function runWinhat() {
-            fetch('http://localhost:5000/run-winhat')
+            fetch('/run-winhat')
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('output').innerText = data.output || data.error;
