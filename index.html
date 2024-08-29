@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <title>Run Winhat Script</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #1e2a38, #0f1626);
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        nav {
+            margin: 0;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #4caf50;
+        }
+        #container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        button {
+            font-size: 20px;
+            padding: 15px 30px;
+            color: #fff;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        button:active {
+            background-color: #388e3c;
+            transform: scale(0.95);
+        }
+        #output {
+            margin-top: 20px;
+            white-space: pre-wrap;
+            background: #1c1c1c;
+            color: #e0e0e0;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .about, .features, .documentation {
+            margin-top: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            text-align: left;
+            max-width: 800px;
+        }
+        .features {
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .documentation {
+            background: rgba(0, 0, 0, 0.7);
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            text-align: center;
+            color: #e0e0e0;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+        }
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+        .features ul, .documentation ul {
+            list-style: none;
+            padding: 0;
+        }
+        .features ul li, .documentation ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+        }
+        .features ul li:last-child, .documentation ul li:last-child {
+            border-bottom: none;
+        }
+        .header-logo {
+            display: flex;
+            align-items: center;
+        }
+        .header-logo img {
+            width: 80px; /* Adjust size as needed */
+            height: auto;
+            margin-right: 15px;
+        }
+        .header-logo h1 {
+            font-size: 50px;
+            color: #e0e0e0;
+            font-family: "Tourney", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+
+        }
+        video {
+            max-width: 50%;
+            height: auto;
+            border: 2px solid #333; /* Optional: Adds a border around the video */
+            border-radius: 5px; /* Optional: Rounds the corners of the border */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <img src="static/1869248.png" alt="Winhat Logo">
+            <h1>Win Hat</h1>
+            <br>
+            
+        </div>
+        <div class="main-content">
+            <h2>Welcome to Win Hat </h2>
+            <p>Win hat is a modern terminal for Windows, designed to enhance your command-line experience.</p>
+        </div>
+        
+        
+    </header>
+    
+    <nav>
+        
+    </nav>
+    <div id="container">
+        <button id="run-script">Run Win Hat</button>
+        <pre id="output"></pre>
+        <h1>Introduction Video</h1>
+        <video controls>
+            <source src="static/Untitled video - Made with Clipchamp (10).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="about">
+            <h2>About Win Hat</h2>
+            <p>
+                <strong>Win Hat</strong> is a versatile terminal designed for Windows operating systems. It provides users with a powerful command-line interface, bringing advanced terminal functionality to the Windows environment. Whether you're a developer, system administrator, or just a tech enthusiast, Winhat enhances your productivity with a streamlined terminal experience.
+            </p>
+            <p>
+                Inspired by the capabilities of Unix-like systems, Winhat offers an intuitive and efficient way to perform tasks, run scripts, and manage your system directly from the command line. It’s tailored for Windows users who need robust terminal features without leaving their native environment.
+            </p>
+            <p>
+                To start using Win Hat, simply click the button above to execute the script. For more information and detailed scroll down to documentation,
+            </p>
+        </div>
+       
+        <div class="features">
+            <h2>Features</h2>
+            <ul>
+                <li><strong>Python Integration:</strong> Easily run Python scripts and manage your Python environment directly within the terminal.</li>
+                <li><strong>Node.js Support:</strong> Execute Node.js applications and manage npm packages seamlessly.</li>
+                <li><strong>Java Compatibility:</strong> Compile and run Java applications, and manage Java classpaths and dependencies.</li>
+                <li><strong>C/C++ Programming:</strong> Develop, compile, and run C and C++ applications efficiently.</li>
+                <li><strong>Custom Add-ons:</strong> Need additional tools or languages? Download and integrate them easily.</li>
+                <li><strong>Internet Connectivity:</strong> Connect to the internet to download and install new tools and updates.</li>
+            </ul>
+        </div>
+        <div class="documentation">
+            <h2>Documentation</h2>
+            <p>
+                Win Hat provides a rich terminal experience for Windows, allowing you to execute scripts, manage programming environments, and perform various tasks directly from the command line. Below is a quick guide on using Winhat and managing different programming languages.
+            </p>
+            <h3>Basic Commands</h3>
+            <ul>
+                <li><strong>Running Scripts:</strong> To run a script, simply type the name of the script file followed by any necessary arguments. For example: <code>python myscript.py</code></li>
+                <li><strong>Navigating Directories:</strong> Use <code>cd</code> to change directories. Example: <code>cd C:\Projects</code></li>
+                <li><strong>Listing Files:</strong> Use <code>dir</code> to list files and directories in the current directory.</li>
+            </ul>
+            <h3>Installing Programming Languages</h3>
+            <ul>
+                <li><strong>Python:</strong> To install Python, download the installer from the <a href="https://www.python.org/downloads/" target="_blank">Python official website</a> and follow the installation instructions.</li>
+                <li><strong>Node.js:</strong> To install Node.js, download the installer from the <a href="https://nodejs.org/en/download/" target="_blank">Node.js official website</a> and follow the installation instructions.</li>
+                <li><strong>Java:</strong> Download the Java Development Kit (JDK) from the <a href="https://www.oracle.com/java/technologies/javase-jdk11-downloads.html" target="_blank">Oracle JDK download page</a> and follow the installation instructions.</li>
+                <li><strong>C/C++:</strong> Install the C/C++ compiler by downloading and installing Visual Studio from the <a href="https://visualstudio.microsoft.com/" target="_blank">Microsoft Visual Studio</a> website.</li>
+            </ul>
+            <h3>Using Git for Version Control</h3>
+            <ul>
+                <li><strong>Clone a Repository:</strong> Use Git to clone repositories directly from the command line. Example: <code>git clone https://github.com/username/repository.git</code></li>
+                <li><strong>Commit Changes:</strong> After making changes, use <code>git add .</code> to stage your changes, and <code>git commit -m "Your message"</code> to commit them.</li>
+                <li><strong>Push Changes:</strong> Push your changes to the remote repository using <code>git push origin main</code>.</li>
+            </ul>
+            <h3>Adding New Programs</h3>
+            <ul>
+                <li><strong>Download Programs:</strong> Download the necessary installation files from the official website or repository.</li>
+                <li><strong>Run Installers:</strong> Execute the downloaded installers and follow the on-screen instructions to install the program.</li>
+                <li><strong>Update PATH Environment Variable:</strong> Add the program's installation directory to the PATH environment variable if necessary.</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Winhat Terminal. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('run-script').addEventListener('click', function() {
+            fetch('/run-win-hat', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    const outputElement = document.getElementById('output');
+                    if (data.status === 'success') {
+                        outputElement.textContent = data.output;
+                    } else {
+                        outputElement.textContent = `Error: ${data.output}`;
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('output').textContent = `Request failed: ${error}`;
+                });
+        });
+    </script>
+</body>
+</html>
