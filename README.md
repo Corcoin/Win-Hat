@@ -31,7 +31,11 @@ Using Git for Version Control
 Clone a Repository: Use Git to clone repositories directly from the command line. Example: git clone https://github.com/username/repository.git
 Commit Changes: After making changes, use git add . to stage your changes, and git commit -m "Your message" to commit them.
 Push Changes: Push your changes to the remote repository using git push origin main.
+
+
 Adding New Programs
 Download Programs: Download the necessary installation files from the official website or repository.
 Run Installers: Execute the downloaded installers and follow the on-screen instructions to install the program.
 Update PATH Environment Variable: Add the program's installation directory to the PATH environment variable if necessary.
+![Screenshot_4-9-2024_213137_corcoin github io](https://github.com/user-attachments/assets/3c9537c4-c4d1-4fd3-998b-7fcfea8c48cd)
+
